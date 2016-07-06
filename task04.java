@@ -24,22 +24,14 @@ public class BetterProgrammerTask {
         return moves;
     }
 
-    public static void move(int n, String start, String auxiliary, String end, List<String> moves) {
+    public static void move(int n, String first, String second, String third, List<String> moves) {
+        
         if (n == 1) {
-            moves.add(start + end);
+            moves.add(first + third);
         } else {
-            move(n - 1, start, end, auxiliary, moves);
-            moves.add(start + end);
-            move(n - 1, auxiliary, start, end, moves);
-        }
-    }
-
-    public static void main(String args[]) {
-
-        List<String> movies = transferFromAtoC(3);
-
-        for (int i = 0; i < movies.size(); i++) {
-            System.out.println(movies.get(i));
+            move(n - 1, first, third, second, moves);
+            moves.add(first + third);
+            move(n - 1, second, first, third, moves);
         }
     }
 }
