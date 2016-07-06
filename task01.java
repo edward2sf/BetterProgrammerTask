@@ -23,9 +23,7 @@ public class BetterProgrammerTask {
         Change change = new Change(dollars, quarters, cents, dimes, cents);
         
         return change;
-
     }
-
 
     // Please do not change this class
     static class Change {
