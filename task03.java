@@ -17,14 +17,13 @@ public class BetterProgrammerTask {
           at the level N in the tree.
           Node root is assumed to be at the level 1. All its children are level 2, etc.
          */
+         
         int sum = root.getValue();
 
         if (N > 1) {
-
             for (int i = 0; i < root.getChildren().size(); i++) {
                 sum = sum + getLevelSum(root.getChildren().get(i), N - 1);
             }
-
         }
 
         return sum;
