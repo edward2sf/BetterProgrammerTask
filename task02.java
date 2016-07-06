@@ -15,9 +15,8 @@ public class BetterProgrammerTask {
         int shift = 0;
 
         boolean isNot;
-
+        
         for (int i = 0; i < a.length; i++) {
-
             isNot = true;
 
             for (int j = 0; j < i; j++) {
@@ -28,7 +27,6 @@ public class BetterProgrammerTask {
                 b[shift] = a[i];
                 shift++;
             }
-
         }
 
         if (a.length == shift) return a;
@@ -40,17 +38,5 @@ public class BetterProgrammerTask {
         }
 
         return c;
-
-
-
-
-    }
-    public static void main(String args[]) {
-        System.out.println("test");
-
-        //int[] a = {2, 1, 4 ,3, 2, 3, 7, 8, 8, 0};
-        int[] a = {};
-        int[] b = removeDuplicates(a);
-        System.out.println(Arrays.toString(b));
     }
 }
